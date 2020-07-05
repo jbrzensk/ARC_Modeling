@@ -1,0 +1,100 @@
+
+
+ <GENCASE4>  Copyright (C) 2018 by Dr Jose M. Dominguez
+ All rights reserved.
+
+ DualSPHysics is an international collaboration between University of Vigo 
+ (Spain) and University of Manchester (UK). 
+
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ * Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+ * Neither the name of the DualSPHysics nor the names of its contributors
+   may be used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER BE LIABLE FOR ANY
+ DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+
+
+GenCase4 v4.0.073 (31-07-2018) 
+================================
+OmpThreads: 8
+
+[LoadXML]
+List: MAIN
+
+Total operations: 15
+[LoadXML-End  time:0.001s]
+
+[Draw]
+Mk size: 1 bytes
+Case limits: (-0.3,-1,-1) - (2.1,1,1)
+Distance between points: 0.01
+Case domain: (0,0,0)-(239,199,199)
+Domain points: 240 x 200 x 200 = 9600000
+Case parts: 1 x 200z
+Memory: 0.01Gb 9.16Mb (9600000)
+
+> MAIN
+<MAIN (Operations= 10+5+0 = 15)
+
+Triangles: 236454 (141253 ignored)
+[Draw-End  time:0.462s]
+
+[PreparePoints]
+Computing Vtk-Cells data...  (time:0.080s)
+BitSizeTot: 24 (3 + 8+7+6)
+Points loaded: 463139
+Sorting points by Z...
+Sorting points by Mk...
+
+List of Points:
+Points -> Fixed-Boundary particles:
+  block[  0] (mk: 11):  43432  -->   43432
+Points -> Floating-Boundary particles:
+  block[  1] (mk:110):   2120  -->    2120
+Points -> Fluid particles:
+  block[  2] (mk:  1): 409667  -->  409667
+  block[  3] (mk:  2):   3960  -->    3960
+  block[  4] (mk:  3):   3960  -->    3960
+
+Particle summary:
+  Fixed....: 43432  id:(0-43431)   MKs:1 (11)
+  Moving...: 0
+  Floating.: 2120  id:(43432-45551)   MKs:1 (110)
+  Fluid....: 417587  id:(45552-463138)   MKs:3 (1-3)
+
+Total particles: 463139 (bound=45552 (fx=43432 mv=0 ft=2120) fluid=417587)
+Total MK blocks: 5 (bound=2 (fx=1 mv=0 ft=1) fluid=3)
+
+Maximum depth: 0.39 (automatic)
+Speed of system: 1.95599 (automatic)
+Speed of sound: max(coefsound*speedsystem,10*sqrt(g*depth))
+Speed of sound: 39.1198 max(39.1198,19.5599)
+
+Coefh:1.000000 (hdp:1.732051)
+
+[PreparePoints-End  time:0.102s]
+
+[SaveCase3D]
+GenCase4_linux64_MkCells.vtk  (time:0.001s, shapes:2764, points:11056)
+GenCase4_linux64.bi4<double>  (time:0.010s)
+GenCase4_linux64.xml  (time:0.000s)
+
+Save files time: 0.011s
+[SaveCase3D-End  time:0.020s]
+

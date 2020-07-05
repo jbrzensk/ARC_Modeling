@@ -1,0 +1,1055 @@
+
+
+ <DUALSPHYSICS4> Copyright (c) 2019 by
+ Dr Jose M. Dominguez, Dr Alejandro Crespo,
+ Prof. Moncho Gomez Gesteira,  Prof. Benedict Rogers,
+ Dr Georgios Fourtakas, Prof. Peter Stansby, Dr Ricardo Canelas,
+ Dr Renato Vacondio, Dr Corrado Altomare, Dr Angelo Tafuni,
+ Orlando Garcia-Feal, Dr Jose Gonzalez Cao
+
+ EPHYSLAB Environmental Physics Laboratory, Universidade de Vigo
+ School of Mechanical, Aerospace and Civil Engineering, University of Manchester
+
+ DualSPHysics is free software: you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public License
+ as published by the Free Software Foundation, either version 2.1 of
+ the License, or (at your option) any later version.
+
+ DualSPHysics is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public License
+ along with DualSPHysics. If not, see <http://www.gnu.org/licenses/>.
+
+
+DualSPHysics4 [Symmetry] v4.4.010 (21-06-2019)
+===============================================
+[Select CUDA Device]
+[CUDA Capable device(s)]
+  Detected 1 CUDA Capable device(s)
+  CUDA Driver Version / Runtime Version: 9.1 / 9.1
+ 
+Device 0: "GeForce GTX 1060 3GB"
+  CUDA Capability Major....: 6.1
+  Global memory............: 3010 MBytes
+  CUDA Cores...............: 1152 ( 9 Multiprocessors, 128 CUDA Cores/MP)
+  GPU Max Clock rate.......: 1709 MHz (1.71 GHz)
+  Memory Clock rate........: 4004 Mhz
+  Memory Bus Width.........: 192-bit
+  L2 Cache Size............: 1536 KBytes
+  Constant memory..........: 64 KBytes
+  Shared memory per block..: 48 KBytes
+  Registers per block......: 65536
+  Maximum threads per MP...: 2048
+  Maximum threads per block: 1024
+  Concurrent copy and kernel execution....: Yes with 2 copy engine(s)
+  Run time limit on kernels...............: Yes
+  Integrated GPU sharing Host Memory......: No
+  Support host page-locked memory mapping.: Yes
+  Device has ECC support..................: Disabled
+  Device supports Unified Addressing (UVA): Yes
+  Device PCI (Domain / Bus / location)....: 0 / 15 / 0
+  Device supports P2P and RDMA............: Yes
+  Device supports P2P from/to GPUs........: 
+ 
+[GPU Hardware]
+Device default: 0  "GeForce GTX 1060 3GB"
+Compute capability: 6.1
+Memory global: 3010 MB
+Memory shared: 49152 Bytes
+[Initialising JSphGpuSingle  10-08-2019 13:02:54]
+ProgramFile=".../bin/linux/DualSPHysics4.4_linux64"
+ExecutionDir=".../jbrzensk/Arc_2/ARC_2"
+XmlFile=".../ARC_2/ARC_2_out/ARC_2.xml"
+OutputDir=".../Arc_2/ARC_2/ARC_2_out"
+OutputDataDir=".../ARC_2/ARC_2_out/data"
+**Basic case configuration is loaded
+**Special case configuration is loaded
+Loading initial state of particles...
+Loaded particles: 665823
+MapRealPos(border)=(-11.1087,-3.10866,1.89134)-(11.1087,3.10866,7.90866)
+MapRealPos(final)=(-12.2195,-3.10866,1.59047)-(12.2195,3.10866,8.51039)
+**Initial state of particles is loaded
+**3D-Simulation parameters:
+CaseName="ARC_2"
+RunName="ARC_2"
+Symmetry=False
+PosDouble="1: Uses double and stores in single precision"
+SvTimers=True
+StepAlgorithm="Symplectic"
+Kernel="Wendland"
+Viscosity="Artificial"
+Visco=0.020000
+ViscoBoundFactor=1.000000
+DeltaSph="None"
+Shifting="None"
+RigidAlgorithm="SPH+CHRONO"
+FloatingCount=1
+FtPause=0.000000
+FtConstraints=False
+CaseNp=665823
+CaseNbound=42913
+CaseNfixed=40809
+CaseNmoving=0
+CaseNfloat=2104
+CaseNfluid=622910
+PeriodicActive="None"
+Dx=0.1
+H=0.173205
+CoefficientH=1
+CteB=2802857.250000
+Gamma=7.000000
+RhopZero=1000.000000
+Cs0=140.071
+CFLnumber=0.200000
+DtIni=0.00123655
+DtMin=6.18274e-05
+DtAllParticles=False
+MassFluid=1.000000
+MassBound=1.000000
+Awen (Wendland)=80.401802
+Bwen (Wendland)=-2321.011230
+FtPause=0.000000
+TimeMax=20
+TimePart=0.05
+Gravity=(0.000000,0.000000,-9.810000)
+NpMinimum=42913
+RhopOut=True
+RhopOutMin=700.000000
+RhopOutMax=1300.000000
+**Requested gpu memory for 665833 particles: 109.2 MB.
+CellMode="2H"
+Hdiv=1
+MapCells=(71,18,20)
+DomCells=(71,18,20)
+DomCellCode="12_10_10"
+ 
+BlockSize calculation mode: Fixed.
+  BsForcesBound=128 (48 regs)
+  BsForcesFluid=128 (56 regs)
+ 
+**CellDiv: Requested gpu memory for 699124 particles: 5.4 MB.
+**CellDiv: Requested gpu memory for 21204 cells (CellMode=2H): 0.3 MB.
+ 
+RunMode="Pos-Double - Single-Gpu"
+ 
+Particle summary:
+  Fixed....: 40809  id:(0-40808)   MKs:1 (11)
+  Moving...: 0
+  Floating.: 2104  id:(40809-42912)   MKs:1 (110)
+  Fluid....: 622910  id:(42913-665822)   MKs:3 (1-3)
+
+Total particles: 665823 (bound=42913 (fx=40809 mv=0 ft=2104) fluid=622910)
+Total MK blocks: 5 (bound=2 (fx=1 mv=0 ft=1) fluid=3)
+ 
+Chrono Objects configuration:
+  DSPHChrono version: v4.3.047
+  Data directory.....: [ARC_2_out/chrono_objs/]
+  Bodies.............: 2
+  Links..............: 2
+  Body_0000 "domain" -  type: Fixed
+    MkBound....: 0
+  Body_0001 "arc" -  type: Floating
+    MkBound....: 99
+    Mass.......: 2104
+    Center.....: (-0.018346,-0.00351711,3.9741)
+    Inertia....: (1238.19,1321.99,1326.99) (xx,yy,zz)
+    Inertia....: (-13.6542,-18.5783,-10.8601) (xy,yz,xz)
+    Links......: 2
+      Link_arc
+      Link_arc_2
+  Link "Link_arc" -  type: Spheric
+    Rotation point: (0,0,3)
+    Stiffness.....: 0
+    Damping.......: 0
+    Bodies........: 1
+      Body_0001 "arc"
+  Link "Link_arc_2" -  type: Spheric
+    Rotation point: (0,0,5.57)
+    Stiffness.....: 0
+    Damping.......: 0
+    Bodies........: 1
+      Body_0001 "arc"
+ 
+InOut configuration:
+**JSphGpu: Requesting gpu memory for 721830 particles: 118.4 MB.
+UseRefilling: True
+UseBoxLimit: True
+  FreeLimits:(-9.95,-3.10866,1.59047)-(9.95,3.10866,8.51039)  FreeCentre:(8.88178e-16,8.88178e-16,5.05043)
+DetermLimit.: 1000 (0th order)
+ExtrapolateMode: FastSingle
+InOut_0
+  Inlet point definition:
+    Initial particles mkfluid=1 (x,y,z): (-10,-3,2)-(-10,3,7)
+  Inlet Position: (-9.95,0,4.5)
+  Inlet Direction: (1,0,0)
+  InOut points: 3111
+  Initial InOut particles: 15555
+  Layers: 5
+  Convert fluid: False
+  Velocity mode: Fixed
+    Velocity profile: Constant 0.5
+  Rhop mode: Hydrostatic
+  Z-Surface mode: Fixed
+    Z-Surface value (initial): 7
+    Z-Bottom value: 2
+    Z-Surface Remove: False
+    Z-Surface SaveVTK: False
+InOut_1
+  Inlet point definition:
+    Initial particles mkfluid=2 (x,y,z): (10,-3,2)-(10,3,7)
+  Inlet Position: (9.95,0,4.5)
+  Inlet Direction: (-1,0,0)
+  InOut points: 3111
+  Initial InOut particles: 24888
+  Layers: 8
+  Convert fluid: True
+  Velocity mode: Fixed
+    Velocity profile: Constant -0.5
+  Rhop mode: Hydrostatic
+  Z-Surface mode: Fixed
+    Z-Surface value (initial): 7
+    Z-Bottom value: 2
+    Z-Surface Remove: False
+    Z-Surface SaveVTK: False
+ 
+**CellDiv: Requested gpu memory for 797586 particles: 6.2 MB.
+**CellDiv: Requested gpu memory for 21204 cells (CellMode=2H): 0.3 MB.
+Allocated memory in CPU: 64964920 (61.96 MB)
+Allocated memory in GPU: 130959501 (124.89 MB)
+Part_0000        700044 particles successfully stored
+  Particles new: 40443 (total: 40443)
+
+[Initialising simulation (fn2c2vq5)  10-08-2019 13:02:55]
+PART       PartTime      TotalSteps    Steps    Time/Sec   Finish time        
+=========  ============  ============  =======  =========  ===================
+**JSphGpu: Requesting gpu memory for 756051 particles: 124.0 MB.
+**CellDiv: Requested gpu memory for 853593 particles: 6.6 MB.
+**CellDiv: Requested gpu memory for 21204 cells (CellMode=2H): 0.3 MB.
+  Progress 0.16% in 30.0s. Estimated finish time: 10-08-2019 18:24:12
+Part_0001      0.050032           200      200    1005.25  10-08-2019 18:37:59
+Part_0002      0.100153           404      204    1026.35  10-08-2019 18:41:30
+  Particles new: 3111 (total: 43554)
+Part_0003      0.150030           607      203     994.57  10-08-2019 18:39:09
+Part_0004      0.200146           811      204     995.18  10-08-2019 18:38:01
+Part_0005      0.250160          1015      204     996.19  10-08-2019 18:37:25
+Part_0006      0.300072          1219      204     999.01  10-08-2019 18:37:10
+  Particles new: 3111 (total: 46665)
+Part_0007      0.350060          1423      204     996.86  10-08-2019 18:36:52
+Part_0008      0.400016          1627      204     998.34  10-08-2019 18:36:43
+Part_0009      0.450095          1832      205     999.44  10-08-2019 18:36:39
+Part_0010      0.500058          2036      204     997.90  10-08-2019 18:36:32
+  Particles new: 3111 (total: 49776)
+Part_0011      0.550109          2240      204     995.64  10-08-2019 18:36:23
+Part_0012      0.600009          2443      203     995.30  10-08-2019 18:36:15
+Part_0013      0.650190          2647      204     994.23  10-08-2019 18:36:06
+Part_0014      0.700113          2850      203    1013.88  10-08-2019 18:36:26
+  Particles new: 3111 (total: 52887)
+Part_0015      0.750039          3053      203    1121.33  10-08-2019 18:39:06
+Part_0016      0.800210          3257      204    1124.25  10-08-2019 18:41:32
+Part_0017      0.850166          3460      203    1064.93  10-08-2019 18:42:30
+Part_0018      0.900084          3663      203    1118.24  10-08-2019 18:44:20
+  Particles new: 3111 (total: 55998)
+Part_0019      0.950233          3867      204    1103.81  10-08-2019 18:45:44
+Part_0020      1.000173          4070      203    1104.88  10-08-2019 18:47:00
+Part_0021      1.050145          4273      203    1115.83  10-08-2019 18:48:20
+Part_0022      1.100107          4476      203    1080.88  10-08-2019 18:49:00
+  Particles new: 3111 (total: 59109)
+Part_0023      1.150038          4679      203    1092.20  10-08-2019 18:49:46
+Part_0024      1.200136          4883      204    1127.58  10-08-2019 18:50:59
+Part_0025      1.250176          5087      204    1126.19  10-08-2019 18:52:05
+Part_0026      1.300098          5290      203    1129.46  10-08-2019 18:53:08
+  Particles new: 3111 (total: 62220)
+Part_0027      1.350243          5494      204    1124.91  10-08-2019 18:54:03
+Part_0028      1.400174          5697      203    1125.61  10-08-2019 18:54:54
+Part_0029      1.450132          5900      203    1124.71  10-08-2019 18:55:41
+Part_0030      1.500068          6103      203    1108.34  10-08-2019 18:56:15
+  Particles new: 3266 (total: 65486)
+Part_0031      1.550221          6307      204    1126.92  10-08-2019 18:56:58
+Part_0032      1.600143          6510      203    1126.19  10-08-2019 18:57:39
+Part_0033      1.650103          6713      203    1107.84  10-08-2019 18:58:05
+Part_0034      1.700060          6916      203    1087.06  10-08-2019 18:58:17
+  Particles new: 3261 (total: 68747)
+Part_0035      1.750227          7120      204    1121.45  10-08-2019 18:58:49
+  Particles new: 65 (total: 68812)
+Part_0036      1.800115          7323      203    1125.14  10-08-2019 18:59:21
+Part_0037      1.850028          7526      203    1111.05  10-08-2019 18:59:43
+Part_0038      1.900007          7729      203    1084.03  10-08-2019 18:59:50
+  Particles new: 4973 (total: 73785)
+Part_0039      1.950173          7933      204    1104.03  10-08-2019 19:00:08
+  Particles new: 270 (total: 74055)
+Part_0040      2.000218          8137      204    1126.73  10-08-2019 19:00:35
+Part_0041      2.050047          8340      203    1127.38  10-08-2019 19:01:01
+Part_0042      2.100218          8544      204    1104.96  10-08-2019 19:01:17
+  Particles new: 3578 (total: 77633)
+Part_0043      2.150133          8747      203    1099.40  10-08-2019 19:01:27
+  Particles new: 298 (total: 77931)
+Part_0044      2.200042          8950      203    1097.40  10-08-2019 19:01:37
+  Particles new: 4 (total: 77935)
+Part_0045      2.250230          9154      204    1113.34  10-08-2019 19:01:54
+Part_0046      2.300170          9357      203    1126.27  10-08-2019 19:02:15
+  Particles new: 4855 (total: 82790)
+Part_0047      2.350072          9560      203    1100.25  10-08-2019 19:02:24
+  Particles new: 275 (total: 83065)
+Part_0048      2.400231          9764      204    1123.31  10-08-2019 19:02:44
+  Particles new: 40 (total: 83105)
+Part_0049      2.450144          9967      203    1125.60  10-08-2019 19:03:02
+  Particles new: 2 (total: 83107)
+Part_0050      2.500078         10171      204    1110.03  10-08-2019 19:03:14
+  Particles new: 4576 (total: 87683)
+Part_0051      2.550103         10375      204    1103.69  10-08-2019 19:03:23
+  Particles new: 323 (total: 88006)
+Part_0052      2.600024         10578      203    1104.01  10-08-2019 19:03:32
+  Particles new: 107 (total: 88113)
+Part_0053      2.650224         10782      204    1123.15  10-08-2019 19:03:47
+  Particles new: 18 (total: 88131)
+Part_0054      2.700170         10985      203    1123.69  10-08-2019 19:04:02
+  Particles new: 4625 (total: 92756)
+Part_0055      2.750069         11188      203    1107.29  10-08-2019 19:04:11
+  Particles new: 114 (total: 92870)
+Part_0056      2.800229         11392      204    1076.18  10-08-2019 19:04:08
+  Particles new: 14 (total: 92884)
+Part_0057      2.850138         11595      203    1125.69  10-08-2019 19:04:23
+  Particles new: 206 (total: 93090)
+Part_0058      2.900060         11798      203    1103.70  10-08-2019 19:04:30
+  Particles new: 4594 (total: 97684)
+Part_0059      2.950212         12002      204    1122.84  10-08-2019 19:04:43
+  Particles new: 381 (total: 98065)
+Part_0060      3.000119         12205      203    1124.18  10-08-2019 19:04:56
+  Particles new: 4 (total: 98069)
+Part_0061      3.050047         12408      203    1103.80  10-08-2019 19:05:01
+  Particles new: 167 (total: 98236)
+Part_0062      3.100003         12611      203    1103.76  10-08-2019 19:05:07
+  Particles new: 1434 (total: 99670)
+Part_0063      3.150165         12815      204    1122.00  10-08-2019 19:05:19
+  Particles new: 3169 (total: 102839)
+Part_0064      3.200068         13018      203    1125.08  10-08-2019 19:05:30
+  Particles new: 12 (total: 102851)
+Part_0065      3.250028         13221      203    1104.12  10-08-2019 19:05:35
+  Particles new: 138 (total: 102989)
+Part_0066      3.300223         13425      204    1123.87  10-08-2019 19:05:46
+  Particles new: 4537 (total: 107526)
+Part_0067      3.350131         13628      203    1091.44  10-08-2019 19:05:47
+  Particles new: 198 (total: 107724)
+Part_0068      3.400031         13831      203    1075.34  10-08-2019 19:05:43
+  Particles new: 47 (total: 107771)
+Part_0069      3.450187         14035      204    1125.83  10-08-2019 19:05:54
+  Particles new: 156 (total: 107927)
+Part_0070      3.500082         14238      203    1123.27  10-08-2019 19:06:04
+  Particles new: 4206 (total: 112133)
+Part_0071      3.550231         14442      204    1124.78  10-08-2019 19:06:13
+  Particles new: 129 (total: 112262)
+Part_0072      3.600108         14645      203    1126.23  10-08-2019 19:06:23
+  Particles new: 50 (total: 112312)
+Part_0073      3.650222         14849      204    1105.97  10-08-2019 19:06:28
+  Particles new: 196 (total: 112508)
+Part_0074      3.700108         15052      203    1020.64  10-08-2019 19:06:09
+  Particles new: 3918 (total: 116426)
+Part_0075      3.750233         15256      204    1074.87  10-08-2019 19:06:05
+  Particles new: 173 (total: 116599)
+Part_0076      3.800078         15459      203    1125.92  10-08-2019 19:06:15
+  Particles new: 105 (total: 116704)
+Part_0077      3.850159         15663      204    1108.80  10-08-2019 19:06:19
+  Particles new: 250 (total: 116954)
+Part_0078      3.900026         15866      203    1122.16  10-08-2019 19:06:27
+  Particles new: 3762 (total: 120716)
+Part_0079      3.950159         16070      204    1106.34  10-08-2019 19:06:32
+  Particles new: 122 (total: 120838)
+Part_0080      4.000036         16273      203    1101.22  10-08-2019 19:06:34
+  Particles new: 147 (total: 120985)
+Part_0081      4.050167         16477      204    1093.46  10-08-2019 19:06:34
+  Particles new: 266 (total: 121251)
+Part_0082      4.100053         16681      204    1095.50  10-08-2019 19:06:36
+  Particles new: 3549 (total: 124800)
+Part_0083      4.150078         16885      204    1105.14  10-08-2019 19:06:39
+  Particles new: 152 (total: 124952)
+Part_0084      4.200214         17089      204    1119.90  10-08-2019 19:06:46
+  Particles new: 136 (total: 125088)
+Part_0085      4.250145         17292      203    1094.57  10-08-2019 19:06:47
+  Particles new: 247 (total: 125335)
+Part_0086      4.300006         17495      203    1095.85  10-08-2019 19:06:48
+  Particles new: 380 (total: 125715)
+Part_0087      4.350097         17699      204    1125.80  10-08-2019 19:06:55
+  Particles new: 3238 (total: 128953)
+Part_0088      4.400131         17903      204    1112.81  10-08-2019 19:07:00
+  Particles new: 243 (total: 129196)
+Part_0089      4.450212         18107      204    1071.85  10-08-2019 19:06:56
+  Particles new: 275 (total: 129471)
+Part_0090      4.500235         18311      204    1116.60  10-08-2019 19:07:01
+  Particles new: 3378 (total: 132849)
+Part_0091      4.550091         18514      203    1106.48  10-08-2019 19:07:05
+  Particles new: 178 (total: 133027)
+Part_0092      4.600197         18718      204    1127.19  10-08-2019 19:07:12
+  Particles new: 219 (total: 133246)
+Part_0093      4.650011         18921      203    1127.72  10-08-2019 19:07:19
+  Particles new: 251 (total: 133497)
+Part_0094      4.700132         19125      204    1121.04  10-08-2019 19:07:25
+  Particles new: 3320 (total: 136817)
+Part_0095      4.750156         19329      204    1109.02  10-08-2019 19:07:28
+  Particles new: 178 (total: 136995)
+Part_0096      4.800236         19533      204    1127.74  10-08-2019 19:07:35
+  Particles new: 194 (total: 137189)
+Part_0097      4.850124         19736      203    1104.17  10-08-2019 19:07:38
+  Particles new: 214 (total: 137403)
+Part_0098      4.900009         19939      203    1121.76  10-08-2019 19:07:43
+  Particles new: 3254 (total: 140657)
+Part_0099      4.950087         20143      204    1129.83  10-08-2019 19:07:50
+  Particles new: 142 (total: 140799)
+Part_0100      5.000151         20347      204    1128.61  10-08-2019 19:07:58
+  Particles new: 152 (total: 140951)
+Part_0101      5.050163         20551      204    1126.93  10-08-2019 19:08:04
+  Particles new: 235 (total: 141186)
+Part_0102      5.100138         20755      204    1104.26  10-08-2019 19:08:05
+  Particles new: 3231 (total: 144417)
+Part_0103      5.150138         20959      204    1131.27  10-08-2019 19:08:12
+  Particles new: 145 (total: 144562)
+Part_0104      5.200218         21163      204    1108.64  10-08-2019 19:08:14
+  Particles new: 123 (total: 144685)
+Part_0105      5.250109         21366      203    1124.99  10-08-2019 19:08:20
+  Particles new: 170 (total: 144855)
+Part_0106      5.300005         21569      203    1080.71  10-08-2019 19:08:17
+  Particles new: 94 (total: 144949)
+Part_0107      5.350076         21773      204    1130.04  10-08-2019 19:08:24
+  Particles new: 3244 (total: 148193)
+Part_0108      5.400163         21977      204    1082.08  10-08-2019 19:08:21
+  Particles new: 142 (total: 148335)
+Part_0109      5.450020         22180      203    1124.57  10-08-2019 19:08:26
+  Particles new: 165 (total: 148500)
+Part_0110      5.500144         22384      204    1123.70  10-08-2019 19:08:31
+  Particles new: 3235 (total: 151735)
+Part_0111      5.550043         22587      203    1100.09  10-08-2019 19:08:31
+  Particles new: 107 (total: 151842)
+Part_0112      5.600068         22791      204    1069.54  10-08-2019 19:08:27
+  Particles new: 144 (total: 151986)
+Part_0113      5.650104         22995      204    1095.58  10-08-2019 19:08:27
+  Particles new: 77 (total: 152063)
+Part_0114      5.700222         23199      204    1094.71  10-08-2019 19:08:26
+  Particles new: 3235 (total: 155298)
+Part_0115      5.750084         23402      203    1109.10  10-08-2019 19:08:28
+  Particles new: 156 (total: 155454)
+Part_0116      5.800190         23606      204    1128.88  10-08-2019 19:08:33
+  Particles new: 152 (total: 155606)
+Part_0117      5.850077         23809      203    1105.38  10-08-2019 19:08:36
+  Particles new: 96 (total: 155702)
+Part_0118      5.900170         24013      204    1125.63  10-08-2019 19:08:40
+  Particles new: 3262 (total: 158964)
+Part_0119      5.950000         24216      203    1131.53  10-08-2019 19:08:46
+  Particles new: 91 (total: 159055)
+Part_0120      6.000109         24420      204    1127.71  10-08-2019 19:08:51
+  Particles new: 83 (total: 159138)
+Part_0121      6.050209         24624      204    1106.22  10-08-2019 19:08:52
+  Particles new: 94 (total: 159232)
+Part_0122      6.100106         24828      204    1130.23  10-08-2019 19:08:58
+  Particles new: 3248 (total: 162480)
+Part_0123      6.150151         25032      204    1131.93  10-08-2019 19:09:03
+  Particles new: 117 (total: 162597)
+Part_0124      6.200099         25236      204    1096.51  10-08-2019 19:09:03
+  Particles new: 68 (total: 162665)
+Part_0125      6.250147         25440      204    1087.14  10-08-2019 19:09:01
+  Particles new: 112 (total: 162777)
+Part_0126      6.300219         25644      204    1080.02  10-08-2019 19:08:59
+  Particles new: 3214 (total: 165991)
+Part_0127      6.350109         25847      203    1107.95  10-08-2019 19:09:00
+  Particles new: 78 (total: 166069)
+Part_0128      6.400014         26050      203    1127.44  10-08-2019 19:09:04
+  Particles new: 64 (total: 166133)
+Part_0129      6.450158         26254      204    1074.49  10-08-2019 19:09:00
+  Particles new: 112 (total: 166245)
+Part_0130      6.500178         26458      204    1085.39  10-08-2019 19:08:58
+  Particles new: 3214 (total: 169459)
+Part_0131      6.550022         26661      203    1116.86  10-08-2019 19:09:01
+  Particles new: 63 (total: 169522)
+Part_0132      6.600164         26866      205    1112.86  10-08-2019 19:09:04
+  Particles new: 62 (total: 169584)
+Part_0133      6.650151         27070      204    1110.84  10-08-2019 19:09:05
+  Particles new: 116 (total: 169700)
+Part_0134      6.700118         27274      204    1111.92  10-08-2019 19:09:08
+  Particles new: 3176 (total: 172876)
+Part_0135      6.750215         27478      204    1121.01  10-08-2019 19:09:11
+  Particles new: 78 (total: 172954)
+Part_0136      6.800108         27681      203    1128.62  10-08-2019 19:09:15
+  Particles new: 76 (total: 173030)
+Part_0137      6.850013         27884      203    1106.03  10-08-2019 19:09:16
+  Particles new: 97 (total: 173127)
+Part_0138      6.900112         28088      204    1122.35  10-08-2019 19:09:20
+  Particles new: 3188 (total: 176315)
+Part_0139      6.950220         28292      204    1109.78  10-08-2019 19:09:21
+  Particles new: 73 (total: 176388)
+Part_0140      7.000068         28495      203    1128.07  10-08-2019 19:09:25
+  Particles new: 97 (total: 176485)
+Part_0141      7.050046         28699      204    1124.55  10-08-2019 19:09:29
+  Particles new: 85 (total: 176570)
+Part_0142      7.100023         28903      204    1089.95  10-08-2019 19:09:27
+  Particles new: 3174 (total: 179744)
+Part_0143      7.150189         29108      205    1133.56  10-08-2019 19:09:32
+  Particles new: 117 (total: 179861)
+Part_0144      7.200243         29312      204    1105.81  10-08-2019 19:09:32
+  Particles new: 104 (total: 179965)
+Part_0145      7.250065         29515      203    1125.92  10-08-2019 19:09:36
+  Particles new: 86 (total: 180051)
+Part_0146      7.300207         29719      204    1123.03  10-08-2019 19:09:40
+  Particles new: 3202 (total: 183253)
+Part_0147      7.350102         29922      203    1128.63  10-08-2019 19:09:43
+  Particles new: 86 (total: 183339)
+Part_0148      7.400226         30126      204    1124.93  10-08-2019 19:09:47
+  Particles new: 95 (total: 183434)
+Part_0149      7.450218         30330      204    1125.81  10-08-2019 19:09:50
+  Particles new: 71 (total: 183505)
+Part_0150      7.500066         30533      203    1103.73  10-08-2019 19:09:51
+  Particles new: 3206 (total: 186711)
+Part_0151      7.550157         30737      204    1106.33  10-08-2019 19:09:51
+  Particles new: 102 (total: 186813)
+Part_0152      7.600221         30941      204    1127.29  10-08-2019 19:09:55
+  Particles new: 74 (total: 186887)
+Part_0153      7.650094         31144      203    1081.86  10-08-2019 19:09:52
+  Particles new: 76 (total: 186963)
+Part_0154      7.700209         31348      204    1081.64  10-08-2019 19:09:50
+  Particles new: 3208 (total: 190171)
+Part_0155      7.750083         31551      203    1088.24  10-08-2019 19:09:48
+  Particles new: 77 (total: 190248)
+Part_0156      7.800236         31755      204    1121.87  10-08-2019 19:09:50
+  Particles new: 77 (total: 190325)
+Part_0157      7.850180         31958      203    1122.30  10-08-2019 19:09:53
+  Particles new: 112 (total: 190437)
+Part_0158      7.900108         32161      203    1104.50  10-08-2019 19:09:54
+  Particles new: 3220 (total: 193657)
+Part_0159      7.950196         32365      204    1110.57  10-08-2019 19:09:55
+  Particles new: 90 (total: 193747)
+Part_0160      8.000232         32569      204    1077.63  10-08-2019 19:09:52
+  Particles new: 62 (total: 193809)
+Part_0161      8.050041         32772      203    1123.35  10-08-2019 19:09:55
+  Particles new: 85 (total: 193894)
+Part_0162      8.100120         32976      204    1066.89  10-08-2019 19:09:50
+  Particles new: 3202 (total: 197096)
+Part_0163      8.150182         33180      204    1099.32  10-08-2019 19:09:51
+  Particles new: 97 (total: 197193)
+Part_0164      8.200230         33384      204    1128.44  10-08-2019 19:09:54
+  Particles new: 94 (total: 197287)
+Part_0165      8.250092         33588      204    1129.68  10-08-2019 19:09:57
+  Particles new: 108 (total: 197395)
+Part_0166      8.300036         33792      204    1124.51  10-08-2019 19:10:00
+  Particles new: 3214 (total: 200609)
+Part_0167      8.350163         33996      204    1069.14  10-08-2019 19:09:56
+  Particles new: 67 (total: 200676)
+Part_0168      8.400218         34200      204    1119.78  10-08-2019 19:09:58
+  Particles new: 86 (total: 200762)
+Part_0169      8.450058         34403      203    1104.80  10-08-2019 19:09:59
+  Particles new: 85 (total: 200847)
+Part_0170      8.500185         34607      204    1100.46  10-08-2019 19:09:59
+  Particles new: 3212 (total: 204059)
+Part_0171      8.550010         34810      203    1127.52  10-08-2019 19:10:02
+  Particles new: 100 (total: 204159)
+Part_0172      8.600191         35015      205    1088.68  10-08-2019 19:10:00
+  Particles new: 91 (total: 204250)
+Part_0173      8.650116         35219      204    1120.35  10-08-2019 19:10:03
+  Particles new: 64 (total: 204314)
+Part_0174      8.700115         35423      204    1109.97  10-08-2019 19:10:04
+  Particles new: 3210 (total: 207524)
+Part_0175      8.750125         35627      204    1110.04  10-08-2019 19:10:05
+  Particles new: 98 (total: 207622)
+Part_0176      8.800105         35831      204    1109.17  10-08-2019 19:10:06
+  Particles new: 87 (total: 207709)
+Part_0177      8.850196         36035      204    1074.59  10-08-2019 19:10:02
+  Particles new: 81 (total: 207790)
+Part_0178      8.900108         36238      203    1086.09  10-08-2019 19:10:01
+  Particles new: 3214 (total: 211004)
+Part_0179      8.950171         36442      204    1114.24  10-08-2019 19:10:02
+  Particles new: 84 (total: 211088)
+Part_0180      9.000026         36645      203    1093.40  10-08-2019 19:10:01
+  Particles new: 73 (total: 211161)
+Part_0181      9.050141         36849      204    1104.82  10-08-2019 19:10:01
+  Particles new: 87 (total: 211248)
+Part_0182      9.100246         37053      204    1121.27  10-08-2019 19:10:03
+  Particles new: 3210 (total: 214458)
+Part_0183      9.150158         37256      203    1126.57  10-08-2019 19:10:07
+  Particles new: 79 (total: 214537)
+Part_0184      9.200193         37460      204    1127.59  10-08-2019 19:10:09
+  Particles new: 93 (total: 214630)
+Part_0185      9.250193         37664      204    1098.99  10-08-2019 19:10:09
+  Particles new: 87 (total: 214717)
+Part_0186      9.300220         37868      204    1111.90  10-08-2019 19:10:11
+  Particles new: 3201 (total: 217918)
+Part_0187      9.350089         38071      203    1126.35  10-08-2019 19:10:13
+  Particles new: 71 (total: 217989)
+Part_0188      9.400085         38275      204    1107.38  10-08-2019 19:10:13
+  Particles new: 87 (total: 218076)
+Part_0189      9.450087         38479      204    1125.90  10-08-2019 19:10:15
+  Particles new: 70 (total: 218146)
+Part_0190      9.500088         38683      204    1123.64  10-08-2019 19:10:19
+  Particles new: 3210 (total: 221356)
+Part_0191      9.550089         38887      204    1128.44  10-08-2019 19:10:21
+  Particles new: 78 (total: 221434)
+Part_0192      9.600153         39091      204    1105.76  10-08-2019 19:10:21
+  Particles new: 71 (total: 221505)
+Part_0193      9.650223         39295      204    1124.78  10-08-2019 19:10:24
+  Particles new: 91 (total: 221596)
+Part_0194      9.700105         39498      203    1122.25  10-08-2019 19:10:26
+  Particles new: 3205 (total: 224801)
+Part_0195      9.750084         39702      204    1122.02  10-08-2019 19:10:28
+  Particles new: 75 (total: 224876)
+Part_0196      9.800118         39906      204    1104.88  10-08-2019 19:10:28
+  Particles new: 89 (total: 224965)
+Part_0197      9.850188         40110      204    1117.82  10-08-2019 19:10:29
+  Particles new: 94 (total: 225059)
+Part_0198      9.900207         40314      204    1123.43  10-08-2019 19:10:31
+  Particles new: 3197 (total: 228256)
+Part_0199      9.950171         40518      204    1130.68  10-08-2019 19:10:35
+  Particles new: 101 (total: 228357)
+Part_0200     10.000193         40722      204    1090.23  10-08-2019 19:10:33
+  Particles new: 93 (total: 228450)
+Part_0201     10.050093         40925      203    1120.78  10-08-2019 19:10:35
+  Particles new: 74 (total: 228524)
+Part_0202     10.100234         41129      204    1101.34  10-08-2019 19:10:34
+  Particles new: 3178 (total: 231702)
+Part_0203     10.150097         41332      203    1125.10  10-08-2019 19:10:37
+  Particles new: 95 (total: 231797)
+Part_0204     10.200204         41536      204    1117.89  10-08-2019 19:10:39
+  Particles new: 75 (total: 231872)
+Part_0205     10.250031         41739      203    1113.48  10-08-2019 19:10:39
+  Particles new: 81 (total: 231953)
+Part_0206     10.300171         41943      204    1122.02  10-08-2019 19:10:41
+  Particles new: 3203 (total: 235156)
+Part_0207     10.350171         42147      204    1129.43  10-08-2019 19:10:44
+  Particles new: 93 (total: 235249)
+Part_0208     10.400244         42351      204    1097.06  10-08-2019 19:10:43
+  Particles new: 64 (total: 235313)
+Part_0209     10.450139         42554      203    1093.88  10-08-2019 19:10:42
+  Particles new: 80 (total: 235393)
+Part_0210     10.500187         42758      204    1089.80  10-08-2019 19:10:41
+  Particles new: 3192 (total: 238585)
+Part_0211     10.550113         42962      204    1125.41  10-08-2019 19:10:43
+  Particles new: 71 (total: 238656)
+Part_0212     10.600168         43166      204    1103.75  10-08-2019 19:10:43
+  Particles new: 79 (total: 238735)
+Part_0213     10.650196         43370      204    1113.40  10-08-2019 19:10:44
+  Particles new: 83 (total: 238818)
+Part_0214     10.700049         43573      203    1113.65  10-08-2019 19:10:44
+  Particles new: 3201 (total: 242019)
+Part_0215     10.750187         43777      204    1126.91  10-08-2019 19:10:47
+  Particles new: 94 (total: 242113)
+Part_0216     10.800200         43981      204    1126.73  10-08-2019 19:10:49
+  Particles new: 76 (total: 242189)
+Part_0217     10.850243         44185      204    1124.33  10-08-2019 19:10:51
+  Particles new: 90 (total: 242279)
+Part_0218     10.900118         44388      203    1121.71  10-08-2019 19:10:53
+  Particles new: 3178 (total: 245457)
+Part_0219     10.950242         44592      204    1082.86  10-08-2019 19:10:51
+  Particles new: 82 (total: 245539)
+Part_0220     11.000009         44795      203    1106.01  10-08-2019 19:10:51
+  Particles new: 78 (total: 245617)
+Part_0221     11.050017         44999      204    1106.99  10-08-2019 19:10:51
+  Particles new: 96 (total: 245713)
+Part_0222     11.100103         45203      204    1123.68  10-08-2019 19:10:53
+  Particles new: 3189 (total: 248902)
+Part_0223     11.150223         45407      204    1111.71  10-08-2019 19:10:53
+  Particles new: 69 (total: 248971)
+Part_0224     11.200105         45610      203    1119.19  10-08-2019 19:10:55
+  Particles new: 95 (total: 249066)
+Part_0225     11.250147         45814      204    1112.86  10-08-2019 19:10:56
+  Particles new: 115 (total: 249181)
+Part_0226     11.300236         46018      204    1114.92  10-08-2019 19:10:57
+  Particles new: 3192 (total: 252373)
+Part_0227     11.350107         46221      203    1127.38  10-08-2019 19:10:59
+  Particles new: 79 (total: 252452)
+Part_0228     11.400011         46424      203    1125.34  10-08-2019 19:11:01
+  Particles new: 77 (total: 252529)
+Part_0229     11.450098         46628      204    1111.06  10-08-2019 19:11:02
+  Particles new: 90 (total: 252619)
+Part_0230     11.500203         46832      204    1064.35  10-08-2019 19:10:58
+  Particles new: 3204 (total: 255823)
+Part_0231     11.550042         47035      203    1118.57  10-08-2019 19:10:59
+  Particles new: 72 (total: 255895)
+Part_0232     11.600206         47240      205    1110.10  10-08-2019 19:10:59
+  Particles new: 75 (total: 255970)
+Part_0233     11.650007         47443      203    1124.70  10-08-2019 19:11:01
+  Particles new: 91 (total: 256061)
+Part_0234     11.700078         47647      204    1117.39  10-08-2019 19:11:02
+  Particles new: 3191 (total: 259252)
+Part_0235     11.750182         47851      204    1072.34  10-08-2019 19:11:00
+  Particles new: 88 (total: 259340)
+Part_0236     11.800094         48054      203    1124.70  10-08-2019 19:11:01
+  Particles new: 68 (total: 259408)
+Part_0237     11.850206         48258      204    1080.87  10-08-2019 19:10:59
+  Particles new: 86 (total: 259494)
+Part_0238     11.900013         48461      203    1108.26  10-08-2019 19:11:00
+  Particles new: 67 (total: 259561)
+Part_0239     11.950116         48666      205    1091.64  10-08-2019 19:10:58
+  Particles new: 3185 (total: 262746)
+Part_0240     12.000168         48870      204    1110.91  10-08-2019 19:10:59
+  Particles new: 83 (total: 262829)
+Part_0241     12.050146         49074      204    1127.02  10-08-2019 19:11:01
+  Particles new: 93 (total: 262922)
+Part_0242     12.100186         49278      204    1080.04  10-08-2019 19:10:59
+  Particles new: 3190 (total: 266112)
+Part_0243     12.150217         49482      204    1073.78  10-08-2019 19:10:57
+  Particles new: 88 (total: 266200)
+Part_0244     12.200007         49685      203    1104.98  10-08-2019 19:10:57
+  Particles new: 72 (total: 266272)
+Part_0245     12.250119         49889      204    1117.88  10-08-2019 19:10:58
+  Particles new: 78 (total: 266350)
+Part_0246     12.300195         50093      204    1095.61  10-08-2019 19:10:57
+  Particles new: 3177 (total: 269527)
+Part_0247     12.350244         50297      204    1123.71  10-08-2019 19:10:59
+  Particles new: 102 (total: 269629)
+Part_0248     12.400022         50500      203    1109.42  10-08-2019 19:10:59
+  Particles new: 72 (total: 269701)
+Part_0249     12.450022         50704      204    1122.48  10-08-2019 19:11:00
+  Particles new: 60 (total: 269761)
+Part_0250     12.500196         50909      205    1109.23  10-08-2019 19:11:01
+  Particles new: 3192 (total: 272953)
+Part_0251     12.550045         51112      203    1106.21  10-08-2019 19:11:01
+  Particles new: 78 (total: 273031)
+Part_0252     12.600188         51316      204    1126.47  10-08-2019 19:11:03
+  Particles new: 73 (total: 273104)
+Part_0253     12.650033         51519      203    1103.39  10-08-2019 19:11:03
+  Particles new: 73 (total: 273177)
+Part_0254     12.700083         51723      204    1105.35  10-08-2019 19:11:03
+  Particles new: 3175 (total: 276352)
+Part_0255     12.750222         51927      204    1106.73  10-08-2019 19:11:03
+  Particles new: 89 (total: 276441)
+Part_0256     12.800101         52130      203    1125.72  10-08-2019 19:11:05
+  Particles new: 71 (total: 276512)
+Part_0257     12.850121         52334      204    1106.07  10-08-2019 19:11:05
+  Particles new: 73 (total: 276585)
+Part_0258     12.900075         52538      204    1117.43  10-08-2019 19:11:06
+  Particles new: 3197 (total: 279782)
+Part_0259     12.950131         52742      204    1117.84  10-08-2019 19:11:07
+  Particles new: 68 (total: 279850)
+Part_0260     13.000158         52946      204    1110.23  10-08-2019 19:11:07
+  Particles new: 73 (total: 279923)
+Part_0261     13.050163         53150      204    1101.71  10-08-2019 19:11:07
+  Particles new: 79 (total: 280002)
+Part_0262     13.100120         53354      204    1125.23  10-08-2019 19:11:09
+  Particles new: 3184 (total: 283186)
+Part_0263     13.150220         53558      204    1129.09  10-08-2019 19:11:10
+  Particles new: 68 (total: 283254)
+Part_0264     13.200056         53761      203    1073.83  10-08-2019 19:11:08
+  Particles new: 88 (total: 283342)
+Part_0265     13.250031         53965      204    1072.16  10-08-2019 19:11:05
+  Particles new: 71 (total: 283413)
+Part_0266     13.300123         54169      204    1122.24  10-08-2019 19:11:07
+  Particles new: 3174 (total: 286587)
+Part_0267     13.350151         54373      204    1130.23  10-08-2019 19:11:09
+  Particles new: 72 (total: 286659)
+Part_0268     13.400165         54577      204    1108.61  10-08-2019 19:11:10
+  Particles new: 68 (total: 286727)
+Part_0269     13.450147         54781      204    1125.53  10-08-2019 19:11:11
+  Particles new: 70 (total: 286797)
+Part_0270     13.500175         54985      204    1100.55  10-08-2019 19:11:11
+  Particles new: 3201 (total: 289998)
+Part_0271     13.550128         55189      204    1072.57  10-08-2019 19:11:08
+  Particles new: 67 (total: 290065)
+Part_0272     13.600184         55393      204    1125.08  10-08-2019 19:11:10
+  Particles new: 90 (total: 290155)
+Part_0273     13.650075         55596      203    1123.86  10-08-2019 19:11:11
+  Particles new: 79 (total: 290234)
+Part_0274     13.700223         55800      204    1116.40  10-08-2019 19:11:12
+  Particles new: 3201 (total: 293435)
+Part_0275     13.750055         56003      203    1090.64  10-08-2019 19:11:11
+  Particles new: 77 (total: 293512)
+Part_0276     13.800180         56207      204    1125.44  10-08-2019 19:11:13
+  Particles new: 68 (total: 293580)
+Part_0277     13.850240         56411      204    1124.69  10-08-2019 19:11:14
+  Particles new: 66 (total: 293646)
+Part_0278     13.900225         56615      204    1124.64  10-08-2019 19:11:15
+  Particles new: 3193 (total: 296839)
+Part_0279     13.950232         56819      204    1108.53  10-08-2019 19:11:16
+  Particles new: 83 (total: 296922)
+Part_0280     14.000072         57023      204    1111.38  10-08-2019 19:11:16
+  Particles new: 68 (total: 296990)
+Part_0281     14.050076         57227      204    1125.37  10-08-2019 19:11:17
+  Particles new: 72 (total: 297062)
+Part_0282     14.100126         57431      204    1071.10  10-08-2019 19:11:15
+  Particles new: 3190 (total: 300252)
+Part_0283     14.150140         57635      204    1089.61  10-08-2019 19:11:13
+  Particles new: 68 (total: 300320)
+Part_0284     14.200048         57839      204    1114.33  10-08-2019 19:11:15
+  Particles new: 84 (total: 300404)
+Part_0285     14.250197         58043      204    1122.22  10-08-2019 19:11:15
+  Particles new: 86 (total: 300490)
+Part_0286     14.300108         58246      203    1098.78  10-08-2019 19:11:15
+  Particles new: 3181 (total: 303671)
+Part_0287     14.350221         58450      204    1125.95  10-08-2019 19:11:16
+  Particles new: 89 (total: 303760)
+Part_0288     14.400192         58654      204    1127.95  10-08-2019 19:11:18
+  Particles new: 78 (total: 303838)
+Part_0289     14.450070         58857      203    1089.23  10-08-2019 19:11:17
+  Particles new: 98 (total: 303936)
+Part_0290     14.500171         59061      204    1094.26  10-08-2019 19:11:16
+  Particles new: 3201 (total: 307137)
+Part_0291     14.550036         59264      203    1126.76  10-08-2019 19:11:18
+  Particles new: 87 (total: 307224)
+Part_0292     14.600127         59468      204    1103.00  10-08-2019 19:11:17
+  Particles new: 62 (total: 307286)
+Part_0293     14.650230         59672      204    1085.90  10-08-2019 19:11:17
+  Particles new: 67 (total: 307353)
+Part_0294     14.700037         59875      203    1099.28  10-08-2019 19:11:16
+  Particles new: 3198 (total: 310551)
+Part_0295     14.750142         60079      204    1126.47  10-08-2019 19:11:17
+  Particles new: 91 (total: 310642)
+Part_0296     14.800006         60282      203    1125.49  10-08-2019 19:11:19
+  Particles new: 92 (total: 310734)
+Part_0297     14.850085         60486      204    1122.81  10-08-2019 19:11:20
+  Particles new: 96 (total: 310830)
+Part_0298     14.900152         60690      204    1101.98  10-08-2019 19:11:20
+  Particles new: 3181 (total: 314011)
+Part_0299     14.950003         60893      203    1085.81  10-08-2019 19:11:19
+  Particles new: 75 (total: 314086)
+Part_0300     15.000134         61097      204    1103.63  10-08-2019 19:11:18
+  Particles new: 75 (total: 314161)
+Part_0301     15.050043         61300      203    1121.19  10-08-2019 19:11:20
+  Particles new: 90 (total: 314251)
+Part_0302     15.100205         61504      204    1119.97  10-08-2019 19:11:20
+  Particles new: 3214 (total: 317465)
+Part_0303     15.150037         61707      203    1105.73  10-08-2019 19:11:20
+  Particles new: 78 (total: 317543)
+Part_0304     15.200101         61911      204    1126.64  10-08-2019 19:11:22
+  Particles new: 100 (total: 317643)
+Part_0305     15.250017         62114      203    1103.78  10-08-2019 19:11:22
+  Particles new: 76 (total: 317719)
+Part_0306     15.300154         62318      204    1099.73  10-08-2019 19:11:22
+  Particles new: 3197 (total: 320916)
+Part_0307     15.350223         62522      204    1126.15  10-08-2019 19:11:22
+  Particles new: 93 (total: 321009)
+Part_0308     15.400115         62725      203    1124.34  10-08-2019 19:11:24
+  Particles new: 70 (total: 321079)
+Part_0309     15.450229         62929      204    1101.76  10-08-2019 19:11:24
+  Particles new: 68 (total: 321147)
+Part_0310     15.500241         63133      204    1083.49  10-08-2019 19:11:23
+  Particles new: 3194 (total: 324341)
+Part_0311     15.550103         63336      203    1105.75  10-08-2019 19:11:22
+  Particles new: 95 (total: 324436)
+Part_0312     15.600219         63540      204    1092.61  10-08-2019 19:11:22
+  Particles new: 93 (total: 324529)
+Part_0313     15.650149         63743      203    1112.45  10-08-2019 19:11:22
+  Particles new: 85 (total: 324614)
+Part_0314     15.700063         63946      203    1119.49  10-08-2019 19:11:23
+  Particles new: 3199 (total: 327813)
+Part_0315     15.750133         64150      204    1106.10  10-08-2019 19:11:22
+  Particles new: 108 (total: 327921)
+Part_0316     15.800062         64354      204    1123.44  10-08-2019 19:11:25
+  Particles new: 75 (total: 327996)
+Part_0317     15.850119         64558      204    1030.21  10-08-2019 19:11:19
+  Particles new: 92 (total: 328088)
+Part_0318     15.900224         64762      204    1069.00  10-08-2019 19:11:17
+  Particles new: 3188 (total: 331276)
+Part_0319     15.950078         64965      203    1125.39  10-08-2019 19:11:18
+  Particles new: 95 (total: 331371)
+Part_0320     16.000144         65169      204    1125.26  10-08-2019 19:11:19
+  Particles new: 85 (total: 331456)
+Part_0321     16.050234         65373      204    1108.14  10-08-2019 19:11:20
+  Particles new: 82 (total: 331538)
+Part_0322     16.100089         65576      203    1117.60  10-08-2019 19:11:20
+  Particles new: 3186 (total: 334724)
+Part_0323     16.150103         65780      204    1128.51  10-08-2019 19:11:22
+  Particles new: 85 (total: 334809)
+Part_0324     16.200112         65984      204    1095.51  10-08-2019 19:11:22
+  Particles new: 74 (total: 334883)
+Part_0325     16.250201         66188      204    1097.01  10-08-2019 19:11:20
+  Particles new: 98 (total: 334981)
+Part_0326     16.300070         66391      203    1121.47  10-08-2019 19:11:21
+  Particles new: 3203 (total: 338184)
+Part_0327     16.350098         66595      204    1121.63  10-08-2019 19:11:23
+  Particles new: 104 (total: 338288)
+Part_0328     16.400137         66799      204    1117.45  10-08-2019 19:11:23
+  Particles new: 82 (total: 338370)
+Part_0329     16.450039         67002      203    1104.87  10-08-2019 19:11:24
+  Particles new: 89 (total: 338459)
+Part_0330     16.500165         67206      204    1121.10  10-08-2019 19:11:25
+  Particles new: 3189 (total: 341648)
+Part_0331     16.550020         67409      203    1126.87  10-08-2019 19:11:26
+  Particles new: 87 (total: 341735)
+Part_0332     16.600132         67613      204    1068.10  10-08-2019 19:11:23
+  Particles new: 107 (total: 341842)
+Part_0333     16.650004         67816      203    1101.62  10-08-2019 19:11:23
+  Particles new: 95 (total: 341937)
+Part_0334     16.700019         68020      204    1124.01  10-08-2019 19:11:25
+  Particles new: 90 (total: 342027)
+Part_0335     16.750050         68224      204    1126.74  10-08-2019 19:11:26
+  Particles new: 3211 (total: 345238)
+Part_0336     16.800131         68428      204    1125.67  10-08-2019 19:11:26
+  Particles new: 94 (total: 345332)
+Part_0337     16.850195         68632      204    1123.90  10-08-2019 19:11:28
+  Particles new: 74 (total: 345406)
+Part_0338     16.900235         68836      204    1103.70  10-08-2019 19:11:28
+  Particles new: 3198 (total: 348604)
+Part_0339     16.950070         69039      203    1107.64  10-08-2019 19:11:28
+  Particles new: 83 (total: 348687)
+Part_0340     17.000166         69243      204    1126.38  10-08-2019 19:11:30
+  Particles new: 96 (total: 348783)
+Part_0341     17.050214         69447      204    1125.40  10-08-2019 19:11:30
+  Particles new: 97 (total: 348880)
+Part_0342     17.100012         69650      203    1100.79  10-08-2019 19:11:30
+  Particles new: 88 (total: 348968)
+Part_0343     17.150007         69854      204    1129.83  10-08-2019 19:11:31
+  Particles new: 3189 (total: 352157)
+Part_0344     17.200234         70059      205    1127.48  10-08-2019 19:11:33
+  Particles new: 92 (total: 352249)
+Part_0345     17.250071         70262      203    1073.58  10-08-2019 19:11:30
+  Particles new: 94 (total: 352343)
+Part_0346     17.300179         70466      204    1108.72  10-08-2019 19:11:31
+  Particles new: 3195 (total: 355538)
+Part_0347     17.350037         70669      203    1126.97  10-08-2019 19:11:32
+  Particles new: 91 (total: 355629)
+Part_0348     17.400031         70873      204    1093.18  10-08-2019 19:11:32
+  Particles new: 86 (total: 355715)
+Part_0349     17.450109         71077      204    1079.15  10-08-2019 19:11:30
+  Particles new: 104 (total: 355819)
+Part_0350     17.500221         71281      204    1101.39  10-08-2019 19:11:30
+  Particles new: 3200 (total: 359019)
+Part_0351     17.550102         71484      203    1126.58  10-08-2019 19:11:31
+  Particles new: 76 (total: 359095)
+Part_0352     17.600133         71688      204    1127.87  10-08-2019 19:11:32
+  Particles new: 106 (total: 359201)
+Part_0353     17.650164         71892      204    1081.19  10-08-2019 19:11:31
+  Particles new: 74 (total: 359275)
+Part_0354     17.700202         72096      204    1124.30  10-08-2019 19:11:32
+  Particles new: 3195 (total: 362470)
+Part_0355     17.750208         72300      204    1129.21  10-08-2019 19:11:33
+  Particles new: 102 (total: 362572)
+Part_0356     17.800187         72504      204    1128.09  10-08-2019 19:11:35
+  Particles new: 84 (total: 362656)
+Part_0357     17.850085         72708      204    1128.46  10-08-2019 19:11:35
+  Particles new: 88 (total: 362744)
+Part_0358     17.900207         72912      204    1120.08  10-08-2019 19:11:36
+  Particles new: 3193 (total: 365937)
+Part_0359     17.950036         73115      203    1104.73  10-08-2019 19:11:36
+  Particles new: 98 (total: 366035)
+Part_0360     18.000168         73319      204    1124.22  10-08-2019 19:11:38
+  Particles new: 105 (total: 366140)
+Part_0361     18.050048         73522      203    1123.65  10-08-2019 19:11:39
+  Particles new: 90 (total: 366230)
+Part_0362     18.100160         73726      204    1121.15  10-08-2019 19:11:39
+  Particles new: 3208 (total: 369438)
+Part_0363     18.150242         73930      204    1080.11  10-08-2019 19:11:38
+  Particles new: 64 (total: 369502)
+Part_0364     18.200208         74134      204    1114.36  10-08-2019 19:11:38
+  Particles new: 74 (total: 369576)
+Part_0365     18.250097         74337      203    1103.75  10-08-2019 19:11:38
+  Particles new: 101 (total: 369677)
+Part_0366     18.300215         74541      204    1096.33  10-08-2019 19:11:38
+  Particles new: 3204 (total: 372881)
+Part_0367     18.350239         74745      204    1094.25  10-08-2019 19:11:36
+  Particles new: 81 (total: 372962)
+Part_0368     18.400011         74948      203    1105.78  10-08-2019 19:11:36
+  Particles new: 80 (total: 373042)
+Part_0369     18.450090         75153      205    1109.27  10-08-2019 19:11:37
+  Particles new: 94 (total: 373136)
+Part_0370     18.500169         75357      204    1121.67  10-08-2019 19:11:38
+  Particles new: 3203 (total: 376339)
+Part_0371     18.550237         75561      204    1106.47  10-08-2019 19:11:37
+  Particles new: 79 (total: 376418)
+Part_0372     18.600159         75765      204    1091.76  10-08-2019 19:11:37
+  Particles new: 72 (total: 376490)
+Part_0373     18.650095         75969      204    1126.92  10-08-2019 19:11:38
+  Particles new: 112 (total: 376602)
+Part_0374     18.700158         76173      204    1102.75  10-08-2019 19:11:37
+  Particles new: 3210 (total: 379812)
+Part_0375     18.750180         76377      204    1108.33  10-08-2019 19:11:38
+  Particles new: 79 (total: 379891)
+Part_0376     18.800140         76581      204    1111.64  10-08-2019 19:11:38
+  Particles new: 103 (total: 379994)
+Part_0377     18.850111         76785      204    1082.79  10-08-2019 19:11:37
+  Particles new: 93 (total: 380087)
+Part_0378     18.900208         76990      205    1106.95  10-08-2019 19:11:37
+  Particles new: 3201 (total: 383288)
+Part_0379     18.950050         77193      203    1126.74  10-08-2019 19:11:38
+  Particles new: 100 (total: 383388)
+Part_0380     19.000122         77397      204    1105.38  10-08-2019 19:11:39
+  Particles new: 81 (total: 383469)
+Part_0381     19.050243         77602      205    1128.76  10-08-2019 19:11:39
+  Particles new: 89 (total: 383558)
+Part_0382     19.100062         77806      204    1107.78  10-08-2019 19:11:39
+  Particles new: 3200 (total: 386758)
+Part_0383     19.150148         78010      204    1110.95  10-08-2019 19:11:40
+  Particles new: 104 (total: 386862)
+Part_0384     19.200207         78214      204    1126.60  10-08-2019 19:11:40
+  Particles new: 98 (total: 386960)
+Part_0385     19.250042         78417      203    1124.72  10-08-2019 19:11:41
+  Particles new: 78 (total: 387038)
+Part_0386     19.300154         78621      204    1101.17  10-08-2019 19:11:42
+  Particles new: 3199 (total: 390237)
+Part_0387     19.350189         78825      204    1129.27  10-08-2019 19:11:42
+  Particles new: 95 (total: 390332)
+Part_0388     19.400014         79028      203    1098.78  10-08-2019 19:11:42
+  Particles new: 69 (total: 390401)
+Part_0389     19.450049         79232      204    1104.72  10-08-2019 19:11:42
+  Particles new: 72 (total: 390473)
+Part_0390     19.500013         79436      204    1118.63  10-08-2019 19:11:43
+  Particles new: 89 (total: 390562)
+Part_0391     19.550006         79640      204    1123.05  10-08-2019 19:11:43
+  Particles new: 3206 (total: 393768)
+Part_0392     19.600143         79844      204    1097.72  10-08-2019 19:11:43
+  Particles new: 90 (total: 393858)
+Part_0393     19.650227         80048      204    1083.00  10-08-2019 19:11:41
+  Particles new: 92 (total: 393950)
+Part_0394     19.700106         80251      203    1077.91  10-08-2019 19:11:40
+  Particles new: 3175 (total: 397125)
+Part_0395     19.750151         80455      204    1102.58  10-08-2019 19:11:40
+  Particles new: 107 (total: 397232)
+Part_0396     19.800085         80659      204    1111.68  10-08-2019 19:11:41
+  Particles new: 88 (total: 397320)
+Part_0397     19.850002         80863      204    1128.67  10-08-2019 19:11:41
+  Particles new: 103 (total: 397423)
+Part_0398     19.900207         81068      205    1103.87  10-08-2019 19:11:42
+  Particles new: 3201 (total: 400624)
+Part_0399     19.950056         81271      203    1126.18  10-08-2019 19:11:43
+  Particles new: 88 (total: 400712)
+Part_0400     20.000148         81475      204    1116.08  10-08-2019 19:11:44
+  Particles new: 84 (total: 400796)
+
+[Simulation finished  10-08-2019 19:11:44]
+Particles of simulation (initial): 665823
+Particles of simulation (total)..: 1066619
+DTs adjusted to DtMin............: 0
+Excluded particles...............: 0
+Total Runtime....................: 22129.417969 sec.
+Simulation Runtime...............: 22129.017578 sec.
+Time per second of simulation....: 1106.442627 sec.
+Steps per second.................: 3.681817
+Steps of simulation..............: 81475
+PART files.......................: 401
+Maximum number of particles......: 701869
+Maximum number of cells..........: 19584
+CPU Memory.......................: 68044810 (64.89 MB)
+GPU Memory.......................: 137298849 (130.94 MB)
+ 
+[GPU Timers]
+VA-Init..........................: 0.399827 sec.
+NL-Limits........................: 24.779762 sec.
+NL-PreSort.......................: 16.455276 sec.
+NL-RadixSort.....................: 178.802017 sec.
+NL-CellBegin.....................: 11.568218 sec.
+NL-SortData......................: 136.596313 sec.
+NL-OutCheck......................: 0.341665 sec.
+CF-PreForces.....................: 59.893425 sec.
+CF-Forces........................: 17906.507812 sec.
+SU-Shifting......................: 0.000000 sec.
+SU-ComputeStep...................: 150.245483 sec.
+SU-Floating......................: 17.595369 sec.
+SU-Motion........................: 0.000000 sec.
+SU-Periodic......................: 0.000000 sec.
+SU-ResizeNp......................: 0.029741 sec.
+SU-DownData......................: 8.920292 sec.
+SU-SavePart......................: 8.309124 sec.
+SU-Chrono........................: 29.177750 sec.
+SU-BoundCorr.....................: 0.000000 sec.
+SU-InOut.........................: 3498.716309 sec.
+ 
+[Output files]
+- CfgChrono_Scheme.vtk.......: Saves VTK file with scheme of Chrono objects and links between objects.
+- CfgInOut_DomainBox.vtk.....: Saves box domain of InOut configurations.
+- CfgInOut_DomainReal.vtk....: Saves real domain of InOut configurations.
+- CfgInit_Domain.vtk.........: Saves the limits of the case and the simulation domain limits.
+- CfgInit_MapCells.vtk.......: Saves the cell division of the simulation domain.
+- Run.csv....................: One line CSV file with execution parameters and other simulation data.
+- Run.out....................: Log file of the simulation.
+- chrono_objs/XXXX_mkXXXX.obj: Geometry files used for Chrono interaction.
+- data/PartFloat.fbi4........: Binary file with floating body information for each instant (input for FloatingInfo program).
+- data/PartInfo.ibi4.........: Binary file with execution information for each instant (input for PartInfo program).
+- data/PartOut_???.obi4......: Binary file with particles excluded during simulation (input for PartVtkOut program).
+- data/Part_????.bi4.........: Binary file with particle data in different instants.
+- data/Part_Head.ibi4........: Binary file with basic information of simulation data.
+ 
