@@ -1,6 +1,6 @@
-#ARC_Modeling
+# ARC_Modeling
 
-##Whats included
+## Whats included
 
    /ARC_2 has links to the files used to run [DualSPH](https://dual.sphysics.org/)
 
