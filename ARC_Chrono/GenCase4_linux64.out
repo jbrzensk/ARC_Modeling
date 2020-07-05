@@ -1,0 +1,123 @@
+
+
+ <GENCASE4>  Copyright (c) 2019 by Dr Jose M. Dominguez
+ All rights reserved.
+
+ DualSPHysics is an international collaboration between University of Vigo 
+ (Spain) and University of Manchester (UK). 
+
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ * Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+ * Neither the name of the DualSPHysics nor the names of its contributors
+   may be used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER BE LIABLE FOR ANY
+ DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+
+
+GenCase4 v4.0.109 (21-06-2019) 
+================================
+OmpThreads: 16
+
+[LoadXML]
+List: MAIN
+
+Total operations: 54
+[LoadXML-End  time:0.002s]
+
+[Draw]
+Mk size: 1 bytes
+Case limits: (-2,-1,-1.5) - (2,1,2)
+Distance between points: 0.01
+Case domain: (0,0,0)-(399,199,349)
+Domain points: 400 x 200 x 350 = 28000000
+Case parts: 1 x 350z
+Memory: 0.03Gb 26.70Mb (28000000)
+
+List of available variables: Dp=[0.01]  PosMin_x=[-2]  PosMin_y=[-1]  PosMin_z=[-1.5]  PosMax_x=[2]  PosMax_y=[1]  PosMax_z=[2]
+
+> MAIN
+FileShapes> tank_Dp.vtk  shapes:3  points:8   (time:0.000s)
+FileShapes> arc_Dp.vtk  shapes:106987  points:1368   (time:0.008s)
+FileShapes> _Dp.vtk <---- EMPTY FILE NOT SAVED
+<MAIN (Operations= 37+17+3 = 57)
+
+Triangles: 236454 (130321 ignored)
+[Draw-End  time:0.573s]
+
+[PreparePoints]
+Computing Vtk-Cells data...  (time:0.228s)
+BitSizeTot: 27 (5 + 9+6+7)
+Points loaded: 358043
+Sorting points by Z...
+Sorting points by Mk...
+
+List of Points:
+Points -> Fixed-Boundary particles:
+  block[  0] (mk: 11):  91579  -->  183158
+Points -> Floating-Boundary particles:
+  block[  1] (mk: 14):      5  -->      10
+  block[  2] (mk: 15):      5  -->      10
+  block[  3] (mk: 16):      5  -->      10
+  block[  4] (mk: 17):      5  -->      10
+  block[  5] (mk: 18):      5  -->      10
+  block[  6] (mk: 19):      5  -->      10
+  block[  7] (mk: 20):      5  -->      10
+  block[  8] (mk: 21):      5  -->      10
+  block[  9] (mk: 22):      5  -->      10
+  block[ 10] (mk: 23):      5  -->      10
+  block[ 11] (mk: 24):      4  -->       8
+  block[ 12] (mk:109):   3759  -->    7518
+  block[ 13] (mk:110):   2101  -->    4202
+Points -> Fluid particles:
+  block[ 14] (mk:  1): 253530  -->  253530
+  block[ 15] (mk:  2):   3510  -->    3510
+  block[ 16] (mk:  3):   3510  -->    3510
+
+Particle summary:
+  Fixed....: 183158  id:(0-183157)   MKs:1 (11)
+  Moving...: 0
+  Floating.: 11828  id:(183158-194985)   MKs:13 (14-24,109-110)
+  Fluid....: 260550  id:(194986-455535)   MKs:3 (1-3)
+
+Total particles: 455536 (bound=194986 (fx=183158 mv=0 ft=11828) fluid=260550)
+Total MK blocks: 17 (bound=14 (fx=1 mv=0 ft=13) fluid=3)
+
+Maximum depth: 0.9 (automatic)
+Speed of system: 2.97136 (automatic)
+Speed of sound: max(coefsound*speedsystem,10*sqrt(g*depth))
+Speed of sound: 59.4273 max(59.4273,29.7136)
+
+Coefh:1.000000 (hdp:1.732051)
+
+[PreparePoints-End  time:0.264s]
+
+[SaveCase3D]
+GenCase4_linux64_MkCells.vtk  (time:0.001s, shapes:3518, points:14072)
+GenCase4_linux64.bi4<double>  (time:0.020s)
+GenCase4_linux64.xml  (time:0.001s)
+
+Save files time: 0.022s
+
+Particle limits:
+  X range: -1.8025 to 1.9925 [m]
+  Y range: -0.2025 to 0.2025 [m]
+  Z range: -0.0025 to 1.0025 [m]
+
+[SaveCase3D-End  time:0.030s]
+
